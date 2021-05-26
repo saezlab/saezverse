@@ -11,7 +11,8 @@ BiocManager::install(c(
   "dorothea",
   "mistyR",
   "OmnipathR",
-  "progeny"
+  "progeny",
+  "wppi"
 ), ask = FALSE)
 
 install.packages(
