@@ -22,5 +22,6 @@ install.packages(
 require(devtools)
 devtools::install_github('saezlab/decoupleR')
 devtools::install_github('saezlab/ocean')
-BiocManager::install('BioNet', ask = FALSE)
+BiocManager::install(c('BioNet', 'qvalue'), ask = FALSE)
 devtools::install_github('saezlab/PHONEMeS-ILP')
+devtools::install_github('saezlab/SLAPenrich')
