@@ -3,27 +3,37 @@ FROM bioconductor/bioconductor_docker:RELEASE_3_13
 ENV PASSWORD=saezlab
 
 WORKDIR /home/rstudio/
+RUN sudo -H -u rstudio echo 'export PATH="/home/rstudio/.local/bin:$PATH"' >> /home/rstudio/.bashrc
+RUN sudo -H -u rstudio echo 'if [ -f ~/.bashrc ]; then . ~/.bashrc; fi' >> /home/rstudio/.profile
 COPY --chown=rstudio:rstudio setup setup
 WORKDIR setup
 
 ARG DEBIAN_FRONTEND=noninteractive
-RUN sudo apt-get -y update
-RUN sudo apt-get -y upgrade
+RUN apt-get -y update
+RUN apt-get -y upgrade
 # Python
-RUN sudo apt-get -y install python3 python3-pip
+RUN apt-get -y install python3 python3-pip
 # For building C-Python bindings
-RUN sudo apt-get -y install libcurl4-openssl-dev python3-dev
+RUN apt-get -y install libcurl4-openssl-dev python3-dev
 # Extras for pypath
-RUN sudo apt-get -y install python3-igraph libcairo2-dev pkg-config
+RUN apt-get -y install python3-igraph libcairo2-dev pkg-config
+
+RUN apt-get clean
 
 # Must be installed before the others (unstated dependencies?)
-RUN pip3 install --user numpy scipy statsmodels pycurl pycairo
+RUN sudo -H -u rstudio pip3 install --user --no-warn-script-location \
+    numpy scipy statsmodels pycurl pycairo
 # Saez Python tools in PyPI
-RUN pip3 install --user pypath-omnipath omnipath bioservices
+RUN sudo -H -u rstudio pip3 install --user --no-warn-script-location \
+    pypath-omnipath omnipath bioservices
 # Saez Python tools from git
-RUN pip3 install --user git+https://github.com/saezlab/progeny-py.git
-RUN pip3 install --user git+https://github.com/saezlab/dorothea-py.git
-RUN pip3 install --user git+https://github.com/saezlab/kinact.git
+RUN sudo -H -u rstudio pip3 install --user --no-warn-script-location \
+    git+https://github.com/saezlab/progeny-py.git
+RUN sudo -H -u rstudio pip3 install --user --no-warn-script-location \
+    git+https://github.com/saezlab/dorothea-py.git
+RUN sudo -H -u rstudio pip3 install --user --no-warn-script-location \
+    git+https://github.com/saezlab/kinact.git
+RUN rm -rf /home/rstudio/.cache/pip
 
 RUN chmod +x *.sh
 RUN sudo bash dependencies.sh
