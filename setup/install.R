@@ -1,4 +1,5 @@
 BiocManager::install(c(
+  "BiRewire",
   "CARNIVAL",
   "CellNOptR",
   "CNORdt",
