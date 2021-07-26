@@ -18,7 +18,7 @@ RUN Rscript -e 'BiocManager::install(ask = FALSE)'
 RUN chmod +x *.sh
 RUN bash dependencies.sh
 
-RUN bash pytools.sh
+RUN bash installpy.sh
 
 RUN Rscript --vanilla install.R
 
