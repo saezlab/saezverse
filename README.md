@@ -27,11 +27,11 @@ Docker image with all tools from the [Saez lab](http://www.saezlab.org) based on
 
 ## Python packages
 
-| Package  | More info                              |
-| -------- | -------------------------------------- |
-| dorothea | https://github.com/saezlab/dorothea-py |
-| kinact   | https://github.com/saezlab/kinact      |
-| omnipath | https://github.com/saezlab/omnipath    |
-| progeny  | https://github.com/saezlab/progeny-py  |
-| pypath   | https://github.com/saezlab/pypath      |
+| Package  | More info                                 |
+| -------- | ----------------------------------------- |
+| dorothea | https://pypi.org/project/dorothea-py/     |
+| kinact   | https://github.com/saezlab/kinact         |
+| omnipath | https://pypi.org/project/omnipath/        |
+| progeny  | https://pypi.org/project/progeny-py/      |
+| pypath   | https://pypi.org/project/pypath-omnipath/ |
 
