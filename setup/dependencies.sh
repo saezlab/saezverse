@@ -6,7 +6,7 @@ apt -y install libcurl4-openssl-dev python3-dev
 apt -y install python3-igraph libcairo2-dev pkg-config
 
 # Python tools dependencies (unstated dependencies?)
-pip3 install --user --no-warn-script-location numpy scipy statsmodels pycurl pycairo
+pip3 install --user --no-warn-script-location bioservices numpy scipy statsmodels pycurl pycairo
 
 # PHONEMeS dependencies
 Rscript --vanilla -e 'BiocManager::install(c("BioNet", "tidyverse", "qvalue"), ask = FALSE)'
