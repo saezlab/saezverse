@@ -1,3 +1,6 @@
+library(remotes)
+
+# Saez R tools from Bioconductor
 BiocManager::install(c(
   "BiRewire",
   "CARNIVAL",
@@ -15,14 +18,7 @@ BiocManager::install(c(
   "wppi"
 ), ask = FALSE)
 
-install.packages(
-  'https://github.com/saezlab/PHONEMeS/raw/master/Package/PHONEMeS_0.2.7.tar.gz',
-  repos = NULL
-)
-
-require(devtools)
-devtools::install_github('saezlab/decoupleR')
-devtools::install_github('saezlab/ocean')
-BiocManager::install(c('BioNet', 'qvalue'), ask = FALSE)
-devtools::install_github('saezlab/PHONEMeS-ILP')
-devtools::install_github('saezlab/SLAPenrich')
+# Saez R tools from GitHub
+remotes::install_github("saezlab/ocean", repos = BiocManager::repositories())
+remotes::install_github("saezlab/PHONEMeS-ILP")
+remotes::install_github("saezlab/SLAPenrich")

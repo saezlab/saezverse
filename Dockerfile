@@ -8,37 +8,21 @@ RUN sudo -H -u rstudio echo 'if [ -f ~/.bashrc ]; then . ~/.bashrc; fi' >> /home
 COPY --chown=rstudio:rstudio setup setup
 WORKDIR setup
 
-ARG DEBIAN_FRONTEND=noninteractive
-RUN apt-get -y update
-RUN apt-get -y upgrade
-# Python
-RUN apt-get -y install python3 python3-pip
-# For building C-Python bindings
-RUN apt-get -y install libcurl4-openssl-dev python3-dev
-# Extras for pypath
-RUN apt-get -y install python3-igraph libcairo2-dev pkg-config
+RUN apt -y update
+RUN apt -y upgrade
+RUN update-alternatives --install /usr/bin/python python /usr/bin/python2 1
+RUN update-alternatives --install /usr/bin/python python /usr/bin/python3 2
 
-RUN apt-get clean
-
-# Must be installed before the others (unstated dependencies?)
-RUN sudo -H -u rstudio pip3 install --user --no-warn-script-location \
-    numpy scipy statsmodels pycurl pycairo
-# Saez Python tools in PyPI
-RUN sudo -H -u rstudio pip3 install --user --no-warn-script-location \
-    pypath-omnipath omnipath bioservices
-# Saez Python tools from git
-RUN sudo -H -u rstudio pip3 install --user --no-warn-script-location \
-    git+https://github.com/saezlab/progeny-py.git
-RUN sudo -H -u rstudio pip3 install --user --no-warn-script-location \
-    git+https://github.com/saezlab/dorothea-py.git
-RUN sudo -H -u rstudio pip3 install --user --no-warn-script-location \
-    git+https://github.com/saezlab/kinact.git
-RUN rm -rf /home/rstudio/.cache/pip
+RUN Rscript -e 'BiocManager::install(ask = FALSE)'
 
 RUN chmod +x *.sh
-RUN sudo bash dependencies.sh
+RUN bash dependencies.sh
+
+RUN bash pytools.sh
 
 RUN Rscript --vanilla install.R
 
+
 WORKDIR /home/rstudio/
+RUN rm -rf .cache/pip
 RUN rm -rf setup
