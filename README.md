@@ -5,7 +5,7 @@ Docker image with all tools from the [Saez lab](http://www.saezlab.org) based on
 
 | Package    | More info                                        |
 | ---------- | ------------------------------------------------ |
-| BiRewire   | http://bioconductor.org/packages/3.13/BiRewire   |
+| BiRewire   | https://bioconductor.org/packages/BiRewire       |
 | CARNIVAL   | https://bioconductor.org/packages/CARNIVAL       |
 | CellNOptR  | https://www.bioconductor.org/packages/CellNOptR  |
 | CNORdt     | https://www.bioconductor.org/packages/CNORdt     |
@@ -13,7 +13,7 @@ Docker image with all tools from the [Saez lab](http://www.saezlab.org) based on
 | CNORfuzzy  | https://www.bioconductor.org/packages/CNORfuzzy  |
 | CNORode    | https://www.bioconductor.org/packages/CNORode    |
 | cosmosR    | https://www.bioconductor.org/packages/cosmosR    |
-| decoupleR  | https://www.bioconductor.org/packages/CNORdt     |
+| decoupleR  | https://www.bioconductor.org/packages/decoupleR  |
 | dorothea   | https://www.bioconductor.org/packages/dorothea   |
 | mistyR     | https://www.bioconductor.org/packages/mistyR     |
 | ocean      | https://github.com/saezlab/ocean                 |
