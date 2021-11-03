@@ -1,5 +1,5 @@
 # saezverse
-Docker image with all tools from the [Saez lab](http://www.saezlab.org) based on [bioconductor/bioconductor_docker:RELEASE_3_13](https://github.com/Bioconductor/bioconductor_docker).
+Docker image with all tools from the [Saez lab](http://www.saezlab.org) based on [bioconductor/bioconductor_docker](https://github.com/Bioconductor/bioconductor_docker).
 
 ## R packages
 
