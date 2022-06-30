@@ -13,6 +13,9 @@ pip3 install --user --no-warn-script-location bioservices numpy scipy statsmodel
 apt -y install coinor-cbc
 Rscript --vanilla -e 'BiocManager::install(c("BioNet", "hash", "tidyverse", "qvalue"), ask = FALSE)'
 
+# LIANA dependencies
+Rscript --vanilla -e 'remotes::install_github("raivokolde/RobustRankAggreg")'
+
 # R to python and back
 Rscript --vanilla -e 'install.packages("reticulate")'
 pip3 install rpy2
