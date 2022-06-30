@@ -21,6 +21,6 @@ BiocManager::install(c(
 # Saez R tools from GitHub
 remotes::install_github("saezlab/ocean", repos = BiocManager::repositories())
 remotes::install_github("saezlab/PHONEMeS-ILP")
-remotes::install_github("saezlab/SLAPenrich")
+remotes::install_github("saezlab/SLAPenrich", repos = BiocManager::repositories())
 remotes::install_github("saezlab/liana")
 

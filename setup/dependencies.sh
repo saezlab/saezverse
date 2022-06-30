@@ -11,7 +11,7 @@ pip3 install --user --no-warn-script-location bioservices numpy scipy statsmodel
 
 # PHONEMeS dependencies
 apt -y install coinor-cbc
-Rscript --vanilla -e 'BiocManager::install(c("BioNet", "tidyverse", "qvalue"), ask = FALSE)'
+Rscript --vanilla -e 'BiocManager::install(c("BioNet", "hash", "tidyverse", "qvalue"), ask = FALSE)'
 
 # R to python and back
 Rscript --vanilla -e 'install.packages("reticulate")'
