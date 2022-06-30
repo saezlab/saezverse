@@ -15,6 +15,7 @@ Docker image with all tools from the [Saez lab](http://www.saezlab.org) based on
 | cosmosR    | https://www.bioconductor.org/packages/cosmosR    |
 | decoupleR  | https://www.bioconductor.org/packages/decoupleR  |
 | dorothea   | https://www.bioconductor.org/packages/dorothea   |
+| LIANA      | https://github.com/saezlab/liana                 |
 | mistyR     | https://www.bioconductor.org/packages/mistyR     |
 | ocean      | https://github.com/saezlab/ocean                 |
 | OmnipathR  | https://www.bioconductor.org/packages/OmnipathR  |
