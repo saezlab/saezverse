@@ -1,6 +1,13 @@
 # saezverse
 Docker image with all tools from the [Saez lab](http://www.saezlab.org) based on [bioconductor/bioconductor_docker](https://github.com/Bioconductor/bioconductor_docker).
 
+To run a container locally use the command:
+```
+docker run -p 8787:8787 tanevski/saezverse:latest
+```
+
+This will make RStudio available at `http://localhost:8787`. Login with username `rstudio` and password `saezlab`.
+
 ## R packages
 
 | Package    | More info                                        |
@@ -30,9 +37,8 @@ Docker image with all tools from the [Saez lab](http://www.saezlab.org) based on
 
 | Package  | More info                                 |
 | -------- | ----------------------------------------- |
-| dorothea | https://pypi.org/project/dorothea-py/     |
+| decoupler| https://pypi.org/project/decoupler/       |
 | kinact   | https://github.com/saezlab/kinact         |
 | omnipath | https://pypi.org/project/omnipath/        |
-| progeny  | https://pypi.org/project/progeny-py/      |
 | pypath   | https://pypi.org/project/pypath-omnipath/ |
 
