@@ -10,7 +10,6 @@ WORKDIR setup
 
 RUN apt -y update
 RUN apt -y upgrade
-RUN update-alternatives --install /usr/bin/python python /usr/bin/python2 1
 RUN update-alternatives --install /usr/bin/python python /usr/bin/python3 2
 
 RUN Rscript -e 'BiocManager::install(ask = FALSE)'
