@@ -19,7 +19,7 @@ RUN bash dependencies.sh
 
 RUN bash installpy.sh
 
-RUN Rscript --vanilla install.R
+RUN bash installr.sh
 
 
 WORKDIR /home/rstudio/
