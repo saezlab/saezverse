@@ -25,4 +25,6 @@ remotes::install_github("saezlab/ocean", repos = BiocManager::repositories())
 remotes::install_github("saezlab/PHONEMeS-ILP")
 remotes::install_github("saezlab/SLAPenrich", repos = BiocManager::repositories())
 remotes::install_github("saezlab/liana")
+remotes::install_github("saezlab/DOT")
+remotes::install_github("saezlab/OmnipathR")
 
