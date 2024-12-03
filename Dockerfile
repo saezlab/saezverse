@@ -3,9 +3,9 @@ FROM bioconductor/bioconductor_docker:RELEASE_3_20
 ENV PASSWORD=saezlab
 
 WORKDIR /home/rstudio/
-RUN sudo -H -u rstudio echo 'export PATH="/home/rstudio/.local/bin:$PATH"' >> /home/rstudio/.bashrc
-RUN sudo -H -u rstudio echo 'if [ -f ~/.bashrc ]; then . ~/.bashrc; fi' >> /home/rstudio/.profile
-COPY --chown=rstudio:rstudio setup setup
+RUN echo 'export PATH="/home/rstudio/.local/bin:$PATH"' >> ~/.bashrc
+RUN echo 'if [ -f ~/.bashrc ]; then . ~/.bashrc; fi' >> ~/.profile
+COPY setup setup
 WORKDIR setup
 
 RUN apt -y update
