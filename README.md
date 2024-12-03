@@ -22,6 +22,7 @@ This will make RStudio available at `http://localhost:8787`. Login with username
 | cosmosR    | https://www.bioconductor.org/packages/cosmosR    |
 | decoupleR  | https://www.bioconductor.org/packages/decoupleR  |
 | dorothea   | https://www.bioconductor.org/packages/dorothea   |
+| DOT        | https://github.com/saezlab/DOT   |
 | LIANA      | https://github.com/saezlab/liana                 |
 | mistyR     | https://www.bioconductor.org/packages/mistyR     |
 | ocean      | https://github.com/saezlab/ocean                 |
@@ -35,10 +36,13 @@ This will make RStudio available at `http://localhost:8787`. Login with username
 
 ## Python packages
 
-| Package  | More info                                 |
-| -------- | ----------------------------------------- |
-| decoupler| https://pypi.org/project/decoupler/       |
-| kinact   | https://github.com/saezlab/kinact         |
-| omnipath | https://pypi.org/project/omnipath/        |
-| pypath   | https://pypi.org/project/pypath-omnipath/ |
+| Package          | More info                                 |
+| ---------------- | ----------------------------------------- |
+| corneto          | https://pypi.org/project/corneto/         |
+| decoupler        | https://pypi.org/project/decoupler/       |
+| kinact           | https://github.com/saezlab/kinact         |
+| liana            | https://pypi.org/project/liana            |
+| networkcommons   | https://pypi.org/project/networkcommons   |
+| omnipath         | https://pypi.org/project/omnipath/        |
+| pypath           | https://pypi.org/project/pypath-omnipath/ |
 
