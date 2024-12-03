@@ -23,5 +23,5 @@ RUN bash installr.sh
 
 
 WORKDIR /home/rstudio/
-RUN rm -rf .cache/pip
+RUN rm -rf ~/.cache/pip
 RUN rm -rf setup
