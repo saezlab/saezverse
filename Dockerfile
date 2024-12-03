@@ -12,7 +12,7 @@ RUN apt -y update
 RUN apt -y upgrade
 RUN update-alternatives --install /usr/bin/python python /usr/bin/python3 2
 
-RUN Rscript -e 'BiocManager::install(ask = FALSE)'
+RUN Rscript -e 'options(repos = c(CRAN = "https://cloud.r-project.org")); BiocManager::install(ask = FALSE)'
 
 RUN chmod +x *.sh
 RUN bash dependencies.sh

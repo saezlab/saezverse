@@ -1,5 +1,7 @@
 library(remotes)
 
+options(repos = c(CRAN = "https://cloud.r-project.org"))
+
 # Saez R tools from Bioconductor
 BiocManager::install(c(
   "BiRewire",
